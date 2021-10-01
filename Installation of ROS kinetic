@@ -1,0 +1,43 @@
+#### ROS_Kinetic_runs_on_UBUNTU-16.04
+
+### Setup your sources.list
+
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+
+
+### Set up your keys
+
+# to_install_curl
+sudo apt install curl 
+
+# to_setup_curl
+curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc  
+
+sudo apt-key add -   ## to_add_curl
+
+### Installation
+
+# to_make_sure_about_the_Debian_update
+sudo apt-get update
+
+# Installs_ROS_rqt_rviz_robot-generi- libraries_2D/3D-simulators_navigation_and_2D/3D-perception
+sudo apt-get install ros-kinetic-desktop-full
+
+### Environment setup
+
+echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+
+source ~/.bashrc #to_source
+OR
+source /opt/ros/kinetic/setup.bash
+
+###  install_tool_and_other_dependencies_building_ROS_packages
+sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential
+
+## Initialize_rosdep
+sudo apt install python-rosdep #to_install_rosdep
+
+sudo rosdep init # initializing_rosdep
+rosdep update # updating_rosdep
+
+
